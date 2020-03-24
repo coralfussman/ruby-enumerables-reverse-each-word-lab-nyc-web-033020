@@ -1,11 +1,20 @@
 def reverse_each_word("Hello there, and how are you?")
 
-string ="Hello there, and how are you?"
-reverse_each_array = []
-index = 0
-reverse_each_array.push(string)
-reverse_each_array.reverse
+  array = string.split(" ")
+    reversed_array = []
 
-reverse_each_array
+    array.each do |i|
+      reversed_array << i.reverse
+    end
+    reversed_array.join(" ")
+end
 
+def reverse_each_word(string)
+  array = string.split(" ")
+  reversed_array = []
+
+  array.collect do |i|
+    reversed_array << i.reverse
+  end
+  reversed_array.join(" ")
 end
